@@ -56,7 +56,7 @@
 		3D5B93FB1753048300F558AC /* ofxTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B93E91753048300F558AC /* ofxTween.cpp */; };
 		3D5B941D1753048A00F558AC /* ofxTextInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B94191753048A00F558AC /* ofxTextInputField.cpp */; };
 		3D5B943B1753049600F558AC /* ofxMSATimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B94361753049600F558AC /* ofxMSATimer.cpp */; };
-		3DA460BC179EC5C2002EC0AC /* CloudsVisualSystemConnectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemConnectors.cpp */; };
+		3DA460BC179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.cpp */; };
 		3DA460C8179ED608002EC0AC /* CloudsVisualSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA460C2179ED608002EC0AC /* CloudsVisualSystem.cpp */; };
 		3DEFE117176E7D8000139095 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DEFE110176E7D8000139095 /* tinyxml.cpp */; };
 		3DEFE118176E7D8000139095 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DEFE112176E7D8000139095 /* tinyxmlerror.cpp */; };
@@ -79,6 +79,10 @@
 		4695E2BD17512E45003001E2 /* ofxSwarmBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4695E2AA17512E45003001E2 /* ofxSwarmBehavior.cpp */; };
 		4695E2BE17512E45003001E2 /* ofxVerletSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4695E2AD17512E45003001E2 /* ofxVerletSolver.cpp */; };
 		4695E2CA17513D99003001E2 /* ofxCameraSaveLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4695E2C817513D99003001E2 /* ofxCameraSaveLoad.cpp */; };
+		50E99FEF17E0138C007E3380 /* normalShader.frag in Sources */ = {isa = PBXBuildFile; fileRef = 50E99FED17E0138C007E3380 /* normalShader.frag */; };
+		50E99FF017E0138C007E3380 /* normalShader.vert in Sources */ = {isa = PBXBuildFile; fileRef = 50E99FEE17E0138C007E3380 /* normalShader.vert */; };
+		50E99FF717E02A6D007E3380 /* randomness.frag in Sources */ = {isa = PBXBuildFile; fileRef = 50E99FF517E02A6D007E3380 /* randomness.frag */; };
+		50E99FF817E02A6D007E3380 /* randomness.vert in Sources */ = {isa = PBXBuildFile; fileRef = 50E99FF617E02A6D007E3380 /* randomness.vert */; };
 		644DD7FC17A206F2009950CB /* ofxAVFVideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 644DD7F717A206F2009950CB /* ofxAVFVideoPlayer.mm */; };
 		644DD7FD17A206F2009950CB /* ofxAVFVideoRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DD7F917A206F2009950CB /* ofxAVFVideoRenderer.m */; };
 		644DD80417A2072B009950CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644DD80117A2072B009950CB /* AVFoundation.framework */; };
@@ -102,10 +106,6 @@
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E761F4D81622CA3D00029E43 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E761F4D71622CA3D00029E43 /* Accelerate.framework */; };
-		E785F7D017A84DEC002371FC /* ParticleConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E785F7CA17A84DEC002371FC /* ParticleConnection.cpp */; };
-		E785F7D117A84DEC002371FC /* ParticleConnectionGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E785F7CC17A84DEC002371FC /* ParticleConnectionGenerator.cpp */; };
-		E785F7D217A84DEC002371FC /* ParticleConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E785F7CE17A84DEC002371FC /* ParticleConnector.cpp */; };
-		E785F7D517A87325002371FC /* ParticleConnectorBin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E785F7D317A87324002371FC /* ParticleConnectorBin.cpp */; };
 		E7D26E5817A2E63A00652876 /* CloudsRGBDVideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7D26E5617A2E63A00652876 /* CloudsRGBDVideoPlayer.cpp */; };
 		E7D26E5C17A2F0CF00652876 /* CloudsRGBDCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7D26E5A17A2F0CF00652876 /* CloudsRGBDCamera.cpp */; };
 		E7D26E6217A31C0D00652876 /* rgbdcombined.frag in Sources */ = {isa = PBXBuildFile; fileRef = E7D26E6017A31C0D00652876 /* rgbdcombined.frag */; };
@@ -266,8 +266,8 @@
 		3D5B94371753049600F558AC /* ofxMSATimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMSATimer.h; sourceTree = "<group>"; };
 		3D5B9440175304B800F558AC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3D5B9442175304B800F558AC /* ofRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofRange.h; sourceTree = "<group>"; };
-		3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemConnectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudsVisualSystemConnectors.cpp; sourceTree = "<group>"; };
-		3DA460BB179EC5C2002EC0AC /* CloudsVisualSystemConnectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudsVisualSystemConnectors.h; sourceTree = "<group>"; };
+		3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudsVisualSystemRandomBuckets.cpp; sourceTree = "<group>"; };
+		3DA460BB179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudsVisualSystemRandomBuckets.h; sourceTree = "<group>"; };
 		3DA460C2179ED608002EC0AC /* CloudsVisualSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudsVisualSystem.cpp; sourceTree = "<group>"; };
 		3DA460C3179ED608002EC0AC /* CloudsVisualSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudsVisualSystem.h; sourceTree = "<group>"; };
 		3DA460C5179ED608002EC0AC /* ofxLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLight.h; sourceTree = "<group>"; };
@@ -379,6 +379,10 @@
 		4695E2AE17512E45003001E2 /* ofxVerletSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVerletSolver.h; sourceTree = "<group>"; };
 		4695E2C817513D99003001E2 /* ofxCameraSaveLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCameraSaveLoad.cpp; sourceTree = "<group>"; };
 		4695E2C917513D99003001E2 /* ofxCameraSaveLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCameraSaveLoad.h; sourceTree = "<group>"; };
+		50E99FED17E0138C007E3380 /* normalShader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normalShader.frag; sourceTree = "<group>"; };
+		50E99FEE17E0138C007E3380 /* normalShader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normalShader.vert; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		50E99FF517E02A6D007E3380 /* randomness.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = randomness.frag; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		50E99FF617E02A6D007E3380 /* randomness.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = randomness.vert; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 		644DD7F617A206F2009950CB /* ofxAVFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAVFVideoPlayer.h; sourceTree = "<group>"; };
 		644DD7F717A206F2009950CB /* ofxAVFVideoPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxAVFVideoPlayer.mm; sourceTree = "<group>"; };
 		644DD7F817A206F2009950CB /* ofxAVFVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAVFVideoRenderer.h; sourceTree = "<group>"; };
@@ -397,7 +401,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* ConnectorsDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectorsDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* RandomBucketsDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomBucketsDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -408,14 +412,6 @@
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E761F4D71622CA3D00029E43 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		E785F7CA17A84DEC002371FC /* ParticleConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleConnection.cpp; sourceTree = "<group>"; };
-		E785F7CB17A84DEC002371FC /* ParticleConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleConnection.h; sourceTree = "<group>"; };
-		E785F7CC17A84DEC002371FC /* ParticleConnectionGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ParticleConnectionGenerator.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		E785F7CD17A84DEC002371FC /* ParticleConnectionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleConnectionGenerator.h; sourceTree = "<group>"; };
-		E785F7CE17A84DEC002371FC /* ParticleConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleConnector.cpp; sourceTree = "<group>"; };
-		E785F7CF17A84DEC002371FC /* ParticleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ParticleConnector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		E785F7D317A87324002371FC /* ParticleConnectorBin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleConnectorBin.cpp; sourceTree = "<group>"; };
-		E785F7D417A87324002371FC /* ParticleConnectorBin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleConnectorBin.h; sourceTree = "<group>"; };
 		E7D26E5617A2E63A00652876 /* CloudsRGBDVideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudsRGBDVideoPlayer.cpp; sourceTree = "<group>"; };
 		E7D26E5717A2E63A00652876 /* CloudsRGBDVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudsRGBDVideoPlayer.h; sourceTree = "<group>"; };
 		E7D26E5A17A2F0CF00652876 /* CloudsRGBDCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudsRGBDCamera.cpp; sourceTree = "<group>"; };
@@ -822,16 +818,8 @@
 		3DA45C5F179DB6C3002EC0AC /* vs_src */ = {
 			isa = PBXGroup;
 			children = (
-				3DA460BB179EC5C2002EC0AC /* CloudsVisualSystemConnectors.h */,
-				3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemConnectors.cpp */,
-				E785F7CD17A84DEC002371FC /* ParticleConnectionGenerator.h */,
-				E785F7CC17A84DEC002371FC /* ParticleConnectionGenerator.cpp */,
-				E785F7CB17A84DEC002371FC /* ParticleConnection.h */,
-				E785F7CA17A84DEC002371FC /* ParticleConnection.cpp */,
-				E785F7CF17A84DEC002371FC /* ParticleConnector.h */,
-				E785F7CE17A84DEC002371FC /* ParticleConnector.cpp */,
-				E785F7D417A87324002371FC /* ParticleConnectorBin.h */,
-				E785F7D317A87324002371FC /* ParticleConnectorBin.cpp */,
+				3DA460BB179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.h */,
+				3DA460BA179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.cpp */,
 			);
 			path = vs_src;
 			sourceTree = SOURCE_ROOT;
@@ -1107,7 +1095,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* ConnectorsDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* RandomBucketsDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1133,6 +1121,10 @@
 		E7D26E5F17A31C0D00652876 /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				50E99FF517E02A6D007E3380 /* randomness.frag */,
+				50E99FF617E02A6D007E3380 /* randomness.vert */,
+				50E99FED17E0138C007E3380 /* normalShader.frag */,
+				50E99FEE17E0138C007E3380 /* normalShader.vert */,
 				E7D26E6017A31C0D00652876 /* rgbdcombined.frag */,
 				E7D26E6117A31C0D00652876 /* rgbdcombined.vert */,
 			);
@@ -1143,9 +1135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* Connectors */ = {
+		E4B69B5A0A3A1756003C02F2 /* RandomBuckets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Connectors" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "RandomBuckets" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -1157,9 +1149,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = Connectors;
+			name = RandomBuckets;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* ConnectorsDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* RandomBucketsDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1167,7 +1159,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Connectors" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "RandomBuckets" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1188,7 +1180,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* Connectors */,
+				E4B69B5A0A3A1756003C02F2 /* RandomBuckets */,
 			);
 		};
 /* End PBXProject section */
@@ -1295,7 +1287,7 @@
 				3DEFE118176E7D8000139095 /* tinyxmlerror.cpp in Sources */,
 				3DEFE119176E7D8000139095 /* tinyxmlparser.cpp in Sources */,
 				3DEFE11A176E7D8000139095 /* ofxXmlSettings.cpp in Sources */,
-				3DA460BC179EC5C2002EC0AC /* CloudsVisualSystemConnectors.cpp in Sources */,
+				3DA460BC179EC5C2002EC0AC /* CloudsVisualSystemRandomBuckets.cpp in Sources */,
 				3DA460C8179ED608002EC0AC /* CloudsVisualSystem.cpp in Sources */,
 				644DD7FC17A206F2009950CB /* ofxAVFVideoPlayer.mm in Sources */,
 				644DD7FD17A206F2009950CB /* ofxAVFVideoRenderer.m in Sources */,
@@ -1303,10 +1295,10 @@
 				E7D26E5C17A2F0CF00652876 /* CloudsRGBDCamera.cpp in Sources */,
 				E7D26E6217A31C0D00652876 /* rgbdcombined.frag in Sources */,
 				E7D26E6317A31C0D00652876 /* rgbdcombined.vert in Sources */,
-				E785F7D017A84DEC002371FC /* ParticleConnection.cpp in Sources */,
-				E785F7D117A84DEC002371FC /* ParticleConnectionGenerator.cpp in Sources */,
-				E785F7D217A84DEC002371FC /* ParticleConnector.cpp in Sources */,
-				E785F7D517A87325002371FC /* ParticleConnectorBin.cpp in Sources */,
+				50E99FEF17E0138C007E3380 /* normalShader.frag in Sources */,
+				50E99FF017E0138C007E3380 /* normalShader.vert in Sources */,
+				50E99FF717E02A6D007E3380 /* randomness.frag in Sources */,
+				50E99FF817E02A6D007E3380 /* randomness.vert in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,7 +1478,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 = "\"$(SRCROOT)/../../CLOUDS/CloudsLibrary/src/Sound/RTCMix/libs/lib/osx\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				PRODUCT_NAME = ConnectorsDebug;
+				PRODUCT_NAME = RandomBucketsDebug;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1588,7 +1580,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 = "\"$(SRCROOT)/../../CLOUDS/CloudsLibrary/src/Sound/RTCMix/libs/lib/osx\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				PRODUCT_NAME = Connectors;
+				PRODUCT_NAME = RandomBuckets;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1596,7 +1588,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Connectors" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "RandomBuckets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -1605,7 +1597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Connectors" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "RandomBuckets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
