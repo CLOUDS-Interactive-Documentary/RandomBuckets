@@ -23,24 +23,6 @@
 //These methods let us add custom GUI parameters and respond to their events
 void CloudsVisualSystemRandomBuckets::selfSetupGui(){
 
-//	connectorGui = new ofxUISuperCanvas("CONNECTORS", gui);
-//	connectorGui->copyCanvasStyle(gui);
-//	connectorGui->copyCanvasProperties(gui);
-//	connectorGui->setName("Custom");
-//	connectorGui->setWidgetFontSize(OFX_UI_FONT_SMALL);
-//	
-//	connectorGui->addSlider("Num Particles", 50, 64*64, &generator.numParticles);
-//	connectorGui->addToggle("Draw Connections", &generator.drawConnections);
-//	connectorGui->addSlider("Min Connection Distance", 1, 100, &generator.minDistance);
-//	connectorGui->addSlider("Boundary Size", 100, 1000, &generator.boundarySize);
-//	
-//	connectorGui->addSlider("Max Connections", 1, 10, &generator.maxConnections);
-//
-//	
-////	ofAddListener(customGui->newGUIEvent, this, &CloudsVisualSystemRandomBuckets::selfGuiEvent);
-//	
-//	guis.push_back(connectorGui);
-//	guimap[connectorGui->getName()] = connectorGui;
 }
 
 
